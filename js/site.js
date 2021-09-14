@@ -16,17 +16,22 @@ function getValue(){
 function reverseString(userString){
 
     let revString = [];
-
     
     //reverse a string using a for loop
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
+    for (let index = userString.length -1 ; index >= 0; index--) {
+        revString += userString[index]; 
     }
+
+    return revString;
 
 }
 //Display the reverse string array
 // View Function
-function displayString(){
+function displayString(revString){
+        
+    // write to the page 
+    document.getElementById("msg").innerHTML = `Your string reversed is: ${revString}`;
+    // turn on the alert box
+    document.getElementById("alert").classList.remove("invisible");
 
 }
